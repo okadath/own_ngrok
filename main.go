@@ -42,7 +42,7 @@ func main() {
 		for {
 			ch, err := sess.Accept()
 			fatal(err)
-			conn, err := net.Dial("tcp", "159.89.134.107:"+flag.Arg(0))
+			conn, err := net.Dial("tcp", "127.0.0.1:"+flag.Arg(0))
 			fatal(err)
 			go join(conn, ch)
 		}
